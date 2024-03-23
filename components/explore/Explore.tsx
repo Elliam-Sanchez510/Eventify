@@ -1,13 +1,12 @@
 import React from 'react';
 import { ScrollView, StyleSheet, View, Text } from 'react-native';
 
-
-const Reservas = () => {
+const Explore = () => {
     return (
         <ScrollView>
             <View>
                 <Text>
-                    Reservas
+                    Exporar eventos
                 </Text>
               
             </View>
@@ -16,7 +15,7 @@ const Reservas = () => {
 
     )
 }
-export default Reservas;
+export default Explore;
 
 const styles = StyleSheet.create({
 

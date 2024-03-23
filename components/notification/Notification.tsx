@@ -7,8 +7,7 @@ const Notification = () => {
     return (
         <ScrollView>
             <View>
-
-
+                <Text>No hay notificaciones</Text>
             </View>
 
 

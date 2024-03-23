@@ -1,6 +1,5 @@
 import React from 'react';
 import { ScrollView, StyleSheet, Text, View, TextInput, TouchableOpacity } from 'react-native';
-import { AntDesign } from '@expo/vector-icons';
 
 const Home = () => {
     return (

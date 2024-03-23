@@ -2,13 +2,15 @@ import React from "react";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import { NavigationContainer } from "@react-navigation/native";
 import { MaterialCommunityIcons, Ionicons } from '@expo/vector-icons';
+import { MaterialIcons } from '@expo/vector-icons';
 
 import HomeScreen from "../screens/HomeScreen";
-import ReservasScreen from "../screens/ReservasScreen";
+import ExploreScreen from "../screens/ExploreScreen";
+import CretaeEventsScreen from "../screens/CretaeEventScreen";
+import MyEventsScree from "../screens/MyEventsScreen";
 import NotificationScreen from "../screens/NotificationScreen";
+import FavoritesScreen from "../screens/CretaeEventScreen";
 import ProfileScreen from "../screens/ProfileScreen";
-import AgregarScreen from "../screens/AgregarScreen";
-import FavoritesScreen from "../screens/FavoritesScreen";
 
 const Tab = createBottomTabNavigator();
 
@@ -25,11 +27,11 @@ function MyTabs() {
         component={HomeScreen}
         options={{
           headerTintColor: '#ffff',
-          headerTitle: 'Inicio',
+          headerTitle: 'Home',
           headerStyle: {
             backgroundColor: '#0693e3'
           },
-          tabBarLabel: "Inicio",
+          tabBarLabel: "Home",
           tabBarIcon: ({ color, }) => (
             <MaterialCommunityIcons
               name="home-variant-outline"
@@ -40,15 +42,15 @@ function MyTabs() {
         }}
       />
       <Tab.Screen
-        name="Reservas"
-        component={ReservasScreen}
+        name="Explore"
+        component={ExploreScreen}
         options={{
           headerTintColor: '#ffff',
-          headerTitle: 'Reservas',
+          headerTitle: 'Explore',
           headerStyle: {
             backgroundColor: '#0693e3'
           },
-          tabBarLabel: "Reservas",
+          tabBarLabel: "Explore",
           tabBarIcon: ({ color, }) => (
             <MaterialCommunityIcons
               name="content-save-outline"
@@ -58,59 +60,61 @@ function MyTabs() {
           ),
         }}
       />
-
       <Tab.Screen
-        name="Favoritos"
-        component={FavoritesScreen}
+        name="Create Event"
+        component={CretaeEventsScreen}
         options={{
           headerTintColor: '#ffff',
-          headerTitle: 'Favoritos',
+          headerTitle: 'Create Event',
           headerStyle: {
             backgroundColor: '#0693e3'
           },
-          tabBarLabel: "Favoritos",
+          tabBarLabel: "Create Event",
           tabBarIcon: ({ color, }) => (
-            <MaterialCommunityIcons
-              name="heart-outline"
-              size={24}
-              color={color}
-            />
+            <MaterialIcons
+            name="create"
+            size={24}
+            color={color} />
           ),
         }}
       />
-
-      {/* <Tab.Screen
-        name="Agregar"
-        component={AgregarScreen}
+      <Tab.Screen
+        name="My Events"
+        component={MyEventsScree}
         options={{
-          tabBarLabel: "",
-          tabBarIcon: ({ }) => (
-            <Ionicons
-              name="add-circle-sharp"
-              size={35}
-              color="#E23E3E"
-            />
+          headerTintColor: '#ffff',
+          headerTitle: 'My Events',
+          headerStyle: {
+            backgroundColor: '#0693e3'
+          },
+          tabBarLabel: "My Events",
+          tabBarIcon: ({ color, }) => (
+            <MaterialIcons
+            name="event"
+            size={24}
+            color={color} />
           ),
         }}
-
-      /> */}
-
-      {/* <Tab.Screen
-        name="Notification"
+      />
+    
+       <Tab.Screen
+        name="Notifications"
         component={NotificationScreen}
         options={{
-          tabBarLabel: " ",
-          tabBarIcon: ({ color, size }) => (
-            <MaterialCommunityIcons
-              name="bell-outline"
-              size={24}
-              color={color}
-            />
+          headerTintColor: '#ffff',
+          headerTitle: 'Notifications',
+          headerStyle: {
+            backgroundColor: '#0693e3'
+          },
+          tabBarLabel: "Notifications",
+          tabBarIcon: ({ color, }) => (
+            <MaterialIcons
+            name="notifications-none"
+            size={24}
+            color={color} />
           ),
-          tabBarBadge: 5,
         }}
-      /> */}
-
+      />
       <Tab.Screen
         name="Profile"
         component={ProfileScreen}
@@ -123,9 +127,9 @@ function MyTabs() {
           tabBarLabel: "Perfil",
           tabBarIcon: ({ color, }) => (
             <MaterialCommunityIcons
-            name="account-supervisor-outline"
-            size={24}
-            color={color} />
+              name="account-supervisor-outline"
+              size={24}
+              color={color} />
           ),
         }}
       />

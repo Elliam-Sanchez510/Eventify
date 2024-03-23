@@ -1,6 +1,5 @@
 import React from "react";
-import Notification from "../Components/Notification/Notification";
-
+import Notification from "../components/notification/Notification";
 
 const NotificationScreen = () => {
     return (

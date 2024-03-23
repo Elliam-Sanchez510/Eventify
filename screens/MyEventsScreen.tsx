@@ -1,10 +1,10 @@
 import React from "react";
 import { StyleSheet, } from "react-native";
-import Home from "../components/home/Home";
+import MyEvents from "../components/my-events/My-events";
 
-const HomeScreen = () => {
+const MyEventsScree = () => {
   return (
-    <Home/>
+    <MyEvents/>
   );
 };
 
@@ -15,4 +15,4 @@ const styles = StyleSheet.create({
 
 });
 
-export default HomeScreen;
+export default MyEventsScree;
