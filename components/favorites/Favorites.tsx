@@ -1,12 +1,12 @@
 import React from 'react';
 import { ScrollView, StyleSheet, View, Text } from 'react-native';
 
-const CreateEvent = () => {
+const Favorite = () => {
   return (
     <ScrollView>
       <View>
         <Text>
-          Crear un evento
+          No hay favoritos
         </Text>
 
       </View>
@@ -15,7 +15,7 @@ const CreateEvent = () => {
 
   )
 }
-export default CreateEvent;
+export default Favorite;
 
 const styles = StyleSheet.create({
 

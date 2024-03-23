@@ -1,16 +1,17 @@
 import React from "react";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import { NavigationContainer } from "@react-navigation/native";
-import { MaterialCommunityIcons, Ionicons } from '@expo/vector-icons';
+import { MaterialCommunityIcons } from '@expo/vector-icons';
 import { MaterialIcons } from '@expo/vector-icons';
 
 import HomeScreen from "../screens/HomeScreen";
 import ExploreScreen from "../screens/ExploreScreen";
 import CretaeEventsScreen from "../screens/CretaeEventScreen";
 import MyEventsScree from "../screens/MyEventsScreen";
+import FavoritesScreen from "../screens/FavoritesScreen";
 import NotificationScreen from "../screens/NotificationScreen";
-import FavoritesScreen from "../screens/CretaeEventScreen";
 import ProfileScreen from "../screens/ProfileScreen";
+
 
 const Tab = createBottomTabNavigator();
 
@@ -72,9 +73,9 @@ function MyTabs() {
           tabBarLabel: "Create Event",
           tabBarIcon: ({ color, }) => (
             <MaterialIcons
-            name="create"
-            size={24}
-            color={color} />
+              name="create"
+              size={24}
+              color={color} />
           ),
         }}
       />
@@ -90,14 +91,32 @@ function MyTabs() {
           tabBarLabel: "My Events",
           tabBarIcon: ({ color, }) => (
             <MaterialIcons
-            name="event"
+              name="event"
+              size={24}
+              color={color} />
+          ),
+        }}
+      />
+      <Tab.Screen
+        name="Favorites"
+        component={FavoritesScreen}
+        options={{
+          headerTintColor: '#ffff',
+          headerTitle: 'Favorites',
+          headerStyle: {
+            backgroundColor: '#0693e3'
+          },
+          tabBarLabel: "Favorites",
+          tabBarIcon: ({ color, }) => (
+            <MaterialIcons  
+            name="favorite-outline"
             size={24}
             color={color} />
           ),
         }}
       />
-    
-       <Tab.Screen
+
+      <Tab.Screen
         name="Notifications"
         component={NotificationScreen}
         options={{
@@ -109,9 +128,9 @@ function MyTabs() {
           tabBarLabel: "Notifications",
           tabBarIcon: ({ color, }) => (
             <MaterialIcons
-            name="notifications-none"
-            size={24}
-            color={color} />
+              name="notifications-none"
+              size={24}
+              color={color} />
           ),
         }}
       />
