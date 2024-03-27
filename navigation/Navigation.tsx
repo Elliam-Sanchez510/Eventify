@@ -5,10 +5,8 @@ import { MaterialCommunityIcons } from '@expo/vector-icons';
 import { MaterialIcons } from '@expo/vector-icons';
 
 import HomeScreen from "../screens/HomeScreen";
-import ExploreScreen from "../screens/ExploreScreen";
 import CretaeEventsScreen from "../screens/CretaeEventScreen";
 import MyEventsScree from "../screens/MyEventsScreen";
-import FavoritesScreen from "../screens/FavoritesScreen";
 import NotificationScreen from "../screens/NotificationScreen";
 import ProfileScreen from "../screens/ProfileScreen";
 
@@ -36,25 +34,6 @@ function MyTabs() {
           tabBarIcon: ({ color, }) => (
             <MaterialCommunityIcons
               name="home-variant-outline"
-              size={24}
-              color={color}
-            />
-          ),
-        }}
-      />
-      <Tab.Screen
-        name="Explore"
-        component={ExploreScreen}
-        options={{
-          headerTintColor: '#ffff',
-          headerTitle: 'Explore',
-          headerStyle: {
-            backgroundColor: '#0693e3'
-          },
-          tabBarLabel: "Explore",
-          tabBarIcon: ({ color, }) => (
-            <MaterialCommunityIcons
-              name="content-save-outline"
               size={24}
               color={color}
             />
@@ -97,25 +76,6 @@ function MyTabs() {
           ),
         }}
       />
-      <Tab.Screen
-        name="Favorites"
-        component={FavoritesScreen}
-        options={{
-          headerTintColor: '#ffff',
-          headerTitle: 'Favorites',
-          headerStyle: {
-            backgroundColor: '#0693e3'
-          },
-          tabBarLabel: "Favorites",
-          tabBarIcon: ({ color, }) => (
-            <MaterialIcons  
-            name="favorite-outline"
-            size={24}
-            color={color} />
-          ),
-        }}
-      />
-
       <Tab.Screen
         name="Notifications"
         component={NotificationScreen}
